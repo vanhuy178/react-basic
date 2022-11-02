@@ -1,9 +1,9 @@
 import './App.scss';
-import Hello from './example/Hello.js';
+import MyComponent from './example/MyComponent.js';
 function App() {
   return (
     <div className="App">
-      <Hello />
+      <MyComponent />
     </div>
   );
 }

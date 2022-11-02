@@ -4,11 +4,10 @@ class ChildHello extends React.Component {
     state = {
         showJobs: false
     }
+
     render() {
-        const { name, age, address, job, arrayJobs } = this.props;
+        const { arrayJobs } = this.props;
         const { showJobs } = this.state;
-        const check = showJobs === true ? 'showJobs: true' : 'showJobs: false';
-        console.log(check);
         const handleShowHide = () => {
             this.setState(
                 {
@@ -18,10 +17,6 @@ class ChildHello extends React.Component {
         }
         return (
             <>
-                <div>
-                    My name is {name}, {age} tuổi, công việc chính là {job}, hiện tại đang sống ở {address}
-                </div>
-
                 <div>
                     {showJobs === false
                         ?
