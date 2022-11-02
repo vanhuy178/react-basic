@@ -9,9 +9,9 @@ class Hello extends React.Component {
         fname: '',
         job: '',
         arrayJobs: [
-            { id: 1, title: 'Developer', salary: '400$' },
-            { id: 2, title: 'Tester', salary: '300$' },
-            { id: 3, title: 'Project Manager', salary: '1000$' }
+            { id: 1, title: 'Developer', salary: 400 },
+            { id: 2, title: 'Tester', salary: 300 },
+            { id: 3, title: 'Project Manager', salary: 1000 }
         ]
     }
     handleChangeFname = (event) => {
