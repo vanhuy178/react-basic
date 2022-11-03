@@ -2,12 +2,12 @@ import React from "react";
 
 class AddComponent extends React.Component {
     state = {
-        titleJobs: '',
+        title: '',
         salary: '',
     }
-    handleChangetitleJobs = (event) => {
+    handleChangetitle = (event) => {
         this.setState({
-            titleJobs: event.target.value
+            title: event.target.value
         })
     }
     handleChangeSalary = (event) => {
@@ -18,17 +18,23 @@ class AddComponent extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         console.log(this.state);
+        this.props.addNewJobs(
+            {
+                id: Math.floor(Math.random() * 11),
+                title: this.state.title,
+                salary: this.state.salary
+            }
+        )
     }
     render() {
         return (
             <>
                 <form>
-                    <label>Your jobs:</label>
+                    <label>Title's job:</label>
                     <br />
                     <input type="text"
-                        value={this.state.titleJobs}
-                        readonly
-                        onChange={(event) => this.handleChangetitleJobs(event)}
+                        value={this.state.title}
+                        onChange={(event) => this.handleChangetitle(event)}
                     />
                     <br />
                     <label>Your salary:</label><br />

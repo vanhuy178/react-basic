@@ -1,0 +1,7 @@
+.job-list-element {
+    display: flex;
+
+    &>button {
+        margin-left: 20px;
+    }
+}
