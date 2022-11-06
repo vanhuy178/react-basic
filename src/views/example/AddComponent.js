@@ -18,6 +18,8 @@ class AddComponent extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         console.log(this.state);
+
+
         this.props.addNewJobs(
             {
                 id: Math.floor(Math.random() * 11),
@@ -43,8 +45,9 @@ class AddComponent extends React.Component {
                         value={this.state.salary}
                         onChange={(event) => this.handleChangeSalary(event)}
                     />
-                    <div></div>
-                    <button type="submit" onClick={(event) => this.handleSubmit(event)}>submit</button>
+                    <div>
+                        <button type="submit" onClick={(event) => this.handleSubmit(event)}>submit</button>
+                    </div>
                 </form>
             </>
         )

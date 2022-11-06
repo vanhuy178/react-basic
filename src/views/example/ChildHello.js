@@ -1,11 +1,10 @@
 import React from 'react'
-
+import './Demo.scss'
 class ChildHello extends React.Component {
     state = {
         showJobs: false
     }
     handleClickDelete = (job) => {
-
         this.props.deleteJob(job)
     }
     render() {
@@ -24,9 +23,10 @@ class ChildHello extends React.Component {
                     {showJobs === false
                         ?
                         <div>
-                            <button onClick={handleShowHide}>Show</button>
+                            <button
+                                className='btn-show'
+                                onClick={handleShowHide}>Show</button>
                         </div>
-
                         :
                         <>
                             <div className='jobs-list'>Danh sách công việc và mức lương:
@@ -41,7 +41,6 @@ class ChildHello extends React.Component {
                                                     <button onClick={() => this.handleClickDelete(job)}>x</button>
                                                 </div>
                                             </>
-
                                         )
                                     })
                                 }

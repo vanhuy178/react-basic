@@ -1,9 +1,11 @@
 import './App.scss';
-import MyComponent from './example/MyComponent.js';
+import ListTodo from './Todos/ListTodo';
+
+
 function App() {
   return (
     <div className="App">
-      <MyComponent />
+      <ListTodo />
     </div>
   );
 }

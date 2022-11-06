@@ -40,7 +40,6 @@ class MyComponent extends React.Component {
                 <ChildHello
                     arrayJobs={this.state.arrayJobs}
                     deleteJob={this.deleteJob}
-
                 />
 
             </>

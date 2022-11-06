@@ -1,0 +1,11 @@
+.job-list-element {
+  display: flex;
+}
+.job-list-element > button {
+  margin-left: 20px;
+}
+
+.btn-show {
+  padding: 5px 20px;
+  color: red;
+}/*# sourceMappingURL=Demo.css.map */
