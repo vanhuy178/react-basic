@@ -24,39 +24,36 @@ class ListTodo extends React.Component {
             }
         ]
     }
-    addNewTodo = (job) => {
+    addNewTodo = (todo) => {
         this.setState(
-            { listTodo: [...this.state.listTodo, job] }
+            { listTodo: [...this.state.listTodo, todo] }
         )
+        console.log(todo);
     }
     deleteTodo = (todoElement) => {
+        console.log('>>> Xóa cc', todoElement.id);
+
         const currentTodo = this.state.listTodo;
-        const resultOfCurrentTodo = currentTodo.filter(itemId => {
-            return itemId.id !== todoElement.id
-        })
+
+
+        const resultOfCurrentTodo = currentTodo.filter(itemId =>
+            itemId.id !== todoElement.id
+        )
         this.setState(
             {
                 listTodo: resultOfCurrentTodo
             }
         )
     }
-    //     deleteJob = (job) => {
-    //     let currentJobs = this.state.arrayJobs
-    //     currentJobs = currentJobs.filter(itemId => {
-    //         return itemId.id !== job.id
-    //     })
-    //     this.setState(
-    //         { arrayJobs: currentJobs }
-    //     )
-    // }
     render() {
         return (
             <>
-                <AddListTodo addNewTodo={this.addNewTodo} />
+                <AddListTodo
+                    addNewTodo={this.addNewTodo}
+                />
                 <RenderList
                     listTodo={this.state.listTodo}
                     deleteTodo={this.deleteTodo}
-
                 />
             </>
         )

@@ -2,6 +2,7 @@ import React from "react";
 
 class AddListTodo extends React.Component {
     state = {
+        id: 5,
         title: ''
     }
     handleChangeTodo = (event) => {
@@ -12,15 +13,20 @@ class AddListTodo extends React.Component {
             }
         )
     }
-    handleSumit = (event) => {
-        //console.log(this.state)
-        event.preventDefault();
-
+    handleSumit = () => {
+        if (!this.state.title) {
+            alert('Missing title')
+            return;
+        }
+        console.log('Xin nhẹ cái id cái thằng lol: ', this.state.id);
         this.props.addNewTodo(
             {
-
+                id: this.state.id++,
                 title: this.state.title
             }
+        )
+        this.setState(
+            { title: '' }
         )
     }
     render() {
@@ -34,13 +40,13 @@ class AddListTodo extends React.Component {
                         className='add-todo-input'
                         type='text'
                         placeholder='typing here...'
-                        // value={this.state.title}
+                        value={this.state.title}
                         onChange={(event) => this.handleChangeTodo(event)}
                     />
                     <button
                         className='btn-add'
                         type="submit"
-                        onClick={(event) => this.handleSumit(event)}>
+                        onClick={() => this.handleSumit()}>
                         Add
                     </button>
                 </div>

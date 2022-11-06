@@ -5,21 +5,21 @@ class RenderList extends React.Component {
         showTodos: false,
         editTodo: []
     }
-
-
     handleClickDelete = (todoElement) => {
         this.props.deleteTodo(todoElement)
     }
 
     handleEditTodo = (todo) => {
         const { editTodo } = this.state;
-        const { listTodo } = this.props
+        const { listTodo } = this.props;
         const isEmptyObject = Object.keys(editTodo).length === 0;
+
         //when click save
         if (isEmptyObject === false && editTodo.id === todo.id) {
 
             const listTodoClone = [...listTodo]
             const objIndex = listTodoClone.findIndex((item => item.id === todo.id));
+
             listTodoClone[objIndex].title = editTodo.title;
             this.setState({
                 listTodo: listTodoClone,
@@ -86,6 +86,7 @@ class RenderList extends React.Component {
                                                     }
                                                 </>
                                             }
+
                                             <button className='list-todo-content-btn-edit'
                                                 onClick={() => this.handleEditTodo(todoElement)}
                                             >
@@ -93,6 +94,7 @@ class RenderList extends React.Component {
                                                     isEmptyObject === false && editTodo.id === todoElement.id ? 'Save' : 'Edit'
                                                 }
                                             </button>
+
                                             <button
                                                 className='list-todo-content-btn-delete'
                                                 onClick={() => this.handleClickDelete(todoElement)}
