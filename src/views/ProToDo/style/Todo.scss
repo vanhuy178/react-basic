@@ -1,0 +1,30 @@
+@use './master';
+
+.to-do-form {
+    &>input {
+        background-color: rgb(27, 112, 137);
+        border: 0;
+        width: 200px;
+        height: 50px;
+        padding: 0 20px;
+        margin: 20px;
+        border-radius: 5px;
+        color: master.$textColor;
+        outline: none;
+    }
+
+    &>input::placeholder {
+        color: rgba(255, 255, 255, .5);
+    }
+
+    &>button {
+        height: 50px;
+        width: 80px;
+        border-radius: 5px;
+        border: 0;
+        background-color: rgb(202, 156, 24);
+        cursor: pointer;
+        font-weight: bolder;
+        color: master.$textColor;
+    }
+}

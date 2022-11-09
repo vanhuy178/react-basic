@@ -14,11 +14,13 @@ class AddListTodo extends React.Component {
         )
     }
     handleSumit = () => {
+
         if (!this.state.title) {
             alert('Missing title')
             return;
         }
-        console.log('Xin nhẹ cái id cái thằng lol: ', this.state.id);
+        console.log('Xin nhẹ cái id thằng lol: ', this.state.id);
+
         this.props.addNewTodo(
             {
                 id: this.state.id++,

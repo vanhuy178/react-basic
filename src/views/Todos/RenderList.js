@@ -73,14 +73,14 @@ class RenderList extends React.Component {
                                                 :
                                                 <>
                                                     {editTodo.id === todoElement.id ?
-                                                        <span>
+                                                        <div>
                                                             <span>{index + 1}</span>-<input
                                                                 className='add-todo-input-span'
                                                                 value={editTodo.title}
                                                                 onChange={(event) => {
                                                                     this.handleOnchangeEditTodo(event)
                                                                 }} />
-                                                        </span>
+                                                        </div>
                                                         :
                                                         <span className='list-todo-content-desc'>{`${index + 1} - ${title}`}</span>
                                                     }

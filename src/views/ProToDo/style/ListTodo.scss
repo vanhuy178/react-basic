@@ -1,0 +1,35 @@
+@use './master';
+
+.list {
+    display: flex;
+    align-items: center;
+    color: master.$textColor;
+    width: 300px;
+    background-color: master.$backgroundListItems;
+    height: 50px;
+    margin: 20px auto;
+    border-radius: 5px;
+    position: relative;
+
+    .add-todoEdit {
+        padding: 10px 15px;
+        outline: none;
+        border: 0;
+        border-radius: 2px;
+    }
+
+    p {
+        padding: 10px;
+    }
+
+    div>span>.fa-icons {
+        position: absolute;
+        right: 35px;
+    }
+
+    div>.fa-icons-delete {
+        position: absolute;
+        right: 10px;
+        button: 10px;
+    }
+}
