@@ -45,3 +45,5 @@ class RenderList extends React.Component {
     }
 }
 export default RenderList;
+
+// Just import it into App.js and use it

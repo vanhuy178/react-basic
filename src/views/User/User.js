@@ -19,6 +19,7 @@ class User extends React.Component {
 
     }
     render() {
+        // console.log(this.props)
         const { listUser } = this.state
         // console.log(listUser);
         return (

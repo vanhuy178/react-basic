@@ -22,18 +22,20 @@ class DetailUser extends React.Component {
     }
     render() {
         const { user } = this.state
+        console.log(user);
         const isEmptyObject = Object.keys(user).length === 0;
-        const { id, first_name, last_name, avatar } = user;
+        const { first_name, last_name, avatar, email } = user;
         return (
             <>
                 <div>
                     The id is: {this.props.router.params.id}
                 </div>
 
-                {isEmptyObject === false &&
+                {
+                    isEmptyObject === false &&
                     <>
-                        <div>User's name: {id}</div>
-                        <div>User's email: {`${first_name} ${last_name}`}</div>
+                        <div>User's name: {first_name} {last_name}</div>
+                        <div>User's email: {email}</div>
                         <div>
                             <img src={avatar} alt='Nhìn cc' />
                         </div>
