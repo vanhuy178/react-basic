@@ -1,11 +1,8 @@
 
-const initState = {
-    users: [
-        { id: 1, name: 'Huy Nguyen' },
-        { id: 2, name: 'Pikachu' }
-    ]
-}
+import React from 'react'
 
-export const rootReducer = (state = initState, action) => {
-    return state;
+export const RootReducer = () => {
+    return (
+        <div>rootReducer</div>
+    )
 }
