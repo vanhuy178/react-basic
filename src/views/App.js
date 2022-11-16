@@ -1,16 +1,10 @@
-
-import './App.scss'
-import RenderTodoAppNth from './TodoAppNth/views/index';
-
-
-//import RenderSearchBar from './SearchBar/renderSearchBar/RenderSearchBar';
+import { store } from './reduxDemoForBeginners/index';
+import './App.scss';
 
 function App() {
+  console.log('Initial State: ', store.getState())
   return (
-    // <RenderSearchBar />
-    <>
-      <RenderTodoAppNth />
-    </>
+    <h1>Hello everyone</h1>
   );
 }
 
